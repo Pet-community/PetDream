@@ -7,13 +7,25 @@ import android.os.Handler;
  * @create 2019/11/7
  * @Describe
  */
-public class BaseModel {
-    public void send(){
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+public class BaseModel<T> {
+    protected onModelListener onModelListener;
 
-            }
-        },200);
+    protected void loadSuccess(T data) {
+        if (onModelListener != null) {
+            onModelListener.onLoadFinish(this, data);
+        }
+    }
+
+    protected void loadFailed(String error) {
+        if (onModelListener != null) {
+            onModelListener.onLoadError(this, error);
+        }
+
+    }
+    public void setOnModelListener(onModelListener<T> onModelListener) {
+        this.onModelListener = onModelListener;
+    }
+    public void removeOnModelListener(){
+        this.onModelListener = null;
     }
 }
