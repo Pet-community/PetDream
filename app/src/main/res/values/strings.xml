@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PetDream</string>
+    <string name="phone_login">手机号登录</string>
 </resources>

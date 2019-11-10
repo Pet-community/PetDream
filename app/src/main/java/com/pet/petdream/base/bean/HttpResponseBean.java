@@ -7,7 +7,7 @@ package com.pet.petdream.base.bean;
  */
 public class HttpResponseBean<T> {
     private int code;
-    private String message;
+    private String msg;
     private T data;
 
     public int getCode() {
@@ -19,11 +19,11 @@ public class HttpResponseBean<T> {
     }
 
     public String getMessage() {
-        return message;
+        return msg;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMessage(String msg) {
+        this.msg = msg;
     }
 
     public T getData() {

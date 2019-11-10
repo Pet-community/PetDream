@@ -10,7 +10,7 @@ import java.lang.ref.SoftReference;
 /**
  * @author wuyang
  * @create 2019/11/7
- * @Describe
+ * @Describe V
  */
 public abstract class BaseViewModel <V extends IBaseView,M extends BaseModel> implements IBaseViewModel<V>{
 protected SoftReference<V> softReference;

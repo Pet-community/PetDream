@@ -1,10 +1,12 @@
 package com.pet.petdream;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.ViewDataBinding;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pet.petdream.base.ui.BaseActivity;
 import com.pet.petdream.databinding.ActivityMainBinding;
@@ -39,8 +41,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, TestViewMode
 
     @Override
     public void onErro(String erro) {
-        test.setUsername(erro);
-        viewDataBinding.setTestData(test);
+
+        Toast.makeText(this,erro,Toast.LENGTH_SHORT).show();
 
 
     }

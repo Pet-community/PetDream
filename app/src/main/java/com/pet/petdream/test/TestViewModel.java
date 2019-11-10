@@ -39,10 +39,11 @@ testModel.setOnModelListener(this);
     getview().onHideLoading();
     getview().onRespo(t);
 
+
     }
 
     @Override
     public void onLoadError(BaseModel baseModel, String erro) {
-getview().onErro("xxx");
+getview().onErro(erro);
     }
 }
