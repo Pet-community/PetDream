@@ -5,14 +5,14 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
-set(PATH_PROJECT ../../../..)
+set(PATH_PROJECT ${PROJECT_SOURCE_DIR}/../../..)
 set(LIBS_PATH ${PATH_PROJECT}/libs)
 set(OBOE_PATH ./oboe)
 
 add_subdirectory(${OBOE_PATH} ./oboe)
 
 include_directories(${OBOE_PATH}/include)
-include_directories(${PATH_PROJECT}/src/main/cpp/includes)
+include_directories(${PATH_PROJECT}/src/main/cpp/include)
 message(STATUS ${PATH_PROJECT}/src/main/cpp/includes)
 add_library(avutil
         SHARED
@@ -86,7 +86,7 @@ add_library(
         SHARED
 
         native-lib.cpp
-        )
+)
 
 set(
         ffmpeg-lib

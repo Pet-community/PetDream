@@ -3,7 +3,7 @@
 #include "util/LogUtil.h"
 
 extern "C" {
-#include "includes/libavformat/avformat.h"
+#include "include/libavformat/avformat.h"
 }
 
 #define native_lib_TAG "native-lib"
