@@ -12,4 +12,8 @@
 app/proguard-rules.pro
 gradle/wrapper/gradle-wrapper.jar
 gradlew
+/local.properties
 gradlew.bat
+/media/src/androidTest/java/com/pet/media/
+/media/src/test/java/com/pet/media/
+/media/proguard-rules.pro
