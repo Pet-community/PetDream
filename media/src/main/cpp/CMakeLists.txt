@@ -79,6 +79,18 @@ set_target_properties(
 #        PROPERTIES IMPORTED_LOCATION
 #        ${LIBS_PATH}/${ANDROID_ABI}/libavdevice.so
 #)
+set(UTIL_SOURCE
+
+        util/Native4JavaCallback.cpp
+        util/MessageQueue.cpp
+        )
+
+set(
+        MEDIA_SOURCE
+
+        media/Player.cpp
+)
+
 
 add_library(
         native-lib
@@ -86,6 +98,8 @@ add_library(
         SHARED
 
         native-lib.cpp
+        ${UTIL_SOURCE}
+        ${MEDIA_SOURCE}
 )
 
 set(
