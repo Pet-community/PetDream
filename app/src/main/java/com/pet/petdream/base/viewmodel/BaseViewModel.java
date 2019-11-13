@@ -1,8 +1,11 @@
 package com.pet.petdream.base.viewmodel;
 
+import android.util.Log;
+
 import androidx.databinding.ViewDataBinding;
 
 import com.pet.petdream.base.model.BaseModel;
+import com.pet.petdream.base.model.OnModelListener;
 import com.pet.petdream.base.view.IBaseView;
 
 import java.lang.ref.SoftReference;
@@ -17,6 +20,7 @@ protected SoftReference<V> softReference;
     @Override
     public void attachView(V view) {
         softReference=new SoftReference<>(view);
+        Log.i("BUG测试","softReference对象创建完毕");
 
     }
 
@@ -26,6 +30,7 @@ protected SoftReference<V> softReference;
         view=null;
         softReference.clear();
         softReference=null;
+        Log.i("BUG测试","softReference对象置空");
     }
     protected  V getview(){
         return softReference.get();
@@ -37,6 +42,7 @@ protected SoftReference<V> softReference;
      * @return
      */
     protected abstract M createModel();
+
     /**
      * 是否已经解除关联
      * @return

@@ -10,18 +10,20 @@ import android.widget.Toast;
 
 import com.pet.petdream.base.ui.BaseActivity;
 import com.pet.petdream.databinding.ActivityMainBinding;
-import com.pet.petdream.test.TestViewModel;
+
+import com.pet.petdream.databinding.ActivityPhoneLoginBinding;
 import com.pet.petdream.test.bean.Test;
 import com.pet.petdream.test.view.ITestView;
+import com.pet.petdream.test.viewmodel.TestViewModel;
 
 
-public class MainActivity extends BaseActivity<ActivityMainBinding, TestViewModel> implements ITestView {
+public class MainActivity extends BaseActivity<ActivityPhoneLoginBinding, TestViewModel> implements ITestView {
     Test test=new Test();
     @Override
     protected void initView() {
     viewModel.attachView(this);
 
-    viewModel.loadTestDate();
+    viewModel.login("123","123");
     }
 
     @Override
@@ -31,7 +33,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, TestViewMode
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_main;
+        return R.layout.activity_phone_login;
     }
 
     @Override
@@ -49,7 +51,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, TestViewMode
 
     @Override
     public void onRespo(Test data) {
-        viewDataBinding.setTestData(data);
+
 
     }
 

@@ -1,16 +1,9 @@
 package com.pet.petdream.base.util;
 
 import com.google.gson.Gson;
-import com.pet.petdream.base.bean.HttpResponseBean;
-import com.pet.petdream.base.model.onModelListener;
 
 import java.util.concurrent.TimeUnit;
 
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
