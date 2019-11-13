@@ -2,7 +2,7 @@
     <string name="app_name">PetDream</string>
     <string name="phone_login">手机号登录</string>
     <string name="pwd_btn_str">密码登录</string>
-    <string name="phone_login_title">手机号登录</string>
+    <string name="phone_login_title">快捷登录</string>
     <string name="phone_tip">手机号</string>
     <string name="code_str">验证码</string>
 </resources>
