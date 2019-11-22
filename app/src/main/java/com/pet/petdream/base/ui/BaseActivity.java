@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModel;
 
+import com.jaeger.library.StatusBarUtil;
 import com.pet.petdream.base.viewmodel.IBaseViewModel;
 
 /**
@@ -27,6 +28,7 @@ public  abstract class BaseActivity <V extends ViewDataBinding,VM extends IBaseV
             viewDataBinding.setVariable(getVariableId(),viewModel);
         }
         viewDataBinding.executePendingBindings();
+
         initView();
     }
 
@@ -53,4 +55,6 @@ public  abstract class BaseActivity <V extends ViewDataBinding,VM extends IBaseV
      * @return viewmodel
      */
     protected abstract VM getViewModel();
+
 }
+

@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'androidx.navigation.safeargs'
+
 
 android {
     compileSdkVersion 29
@@ -55,4 +55,6 @@ dependencies {
     //fragment导航
     implementation 'androidx.navigation:navigation-fragment:2.1.0'
     implementation 'androidx.navigation:navigation-ui:2.1.0'
+    //沉浸式状态栏依赖
+
 }

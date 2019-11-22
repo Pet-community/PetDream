@@ -39,5 +39,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     //调试
-
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.just.agentweb:agentweb:1.0.3'
 }
